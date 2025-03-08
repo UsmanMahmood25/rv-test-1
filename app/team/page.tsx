@@ -1,6 +1,6 @@
 "use client";
 
-import { useDocumentTitle } from "@/components/Tab_Title";
+import { useEffect } from "react";
 
 interface MyPageProps {
   pageTitle?: string;
@@ -86,7 +86,11 @@ const Team_Section: React.FC<Team_Section_Item> = ({ title, members }) => {
 }
 
 export default function Team({ pageTitle = "ReVOLT: Team" }: MyPageProps) {
-    useDocumentTitle(pageTitle);
+    useEffect(() => {
+        if (pageTitle) {
+          document.title = pageTitle; // This updates the tab title dynamically
+        }
+      }, [pageTitle]);
 
     return (
         <div className={ts.team_main}>
