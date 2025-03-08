@@ -59,7 +59,7 @@ const SideBar: React.FC = () => {
                 <Link href="/" className={hs.h_b} onClick={hideSide}>Home</Link>
                 <Link href="/team" className={hs.h_b} onClick={hideSide}>Team</Link>
                 <Link href="/vehicles" className={hs.h_b} onClick={hideSide}>Vehicles</Link>
-                <Link href="/sponsors" className={hs.h_b} onClick={hideSide}>Sponsors</Link>
+                <Link href="/sponsor" className={hs.h_b} onClick={hideSide}>Sponsors</Link>
 
                 <div className={hs.side_socials}>
                     {/* Uofc SU Link */}
