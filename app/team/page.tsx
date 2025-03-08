@@ -3,7 +3,7 @@
 import { useDocumentTitle } from "@/components/Tab_Title";
 
 interface MyPageProps {
-  pageTitle: string;
+  pageTitle?: string;
 }
 
 import Image from "next/image";
