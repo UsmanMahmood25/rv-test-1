@@ -1,11 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
-
-interface MyPageProps {
-  pageTitle?: string;
-}
-
 import Image from "next/image";
 import ts from "@/styles/Team.module.scss";
 import RandomImg from "@/components/Random_Image";
@@ -85,12 +79,7 @@ const Team_Section: React.FC<Team_Section_Item> = ({ title, members }) => {
     )
 }
 
-export default function Team({ pageTitle = "ReVOLT: Team" }: MyPageProps) {
-    useEffect(() => {
-        if (pageTitle) {
-          document.title = pageTitle; // This updates the tab title dynamically
-        }
-      }, [pageTitle]);
+export default function Team() {
 
     return (
         <div className={ts.team_main}>

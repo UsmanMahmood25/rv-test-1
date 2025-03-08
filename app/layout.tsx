@@ -23,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <title>ReVOLT</title>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
           <Header/>{children}<Footer/>
       </body>
