@@ -1,6 +1,8 @@
 "use client";
 
+import React from "react";
 import { useDocumentTitle } from "@/components/Tab_Title";
+import UnderDevelopment from "@/components/Under_Devlopment";
 
 interface MyPageProps {
   pageTitle?: string;
@@ -10,6 +12,6 @@ export default function Memeber({ pageTitle }: MyPageProps) {
     useDocumentTitle(pageTitle);
 
     return (
-        <p>Staff Only</p>
+        <UnderDevelopment />
     )
 }
