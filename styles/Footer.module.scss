@@ -1,0 +1,96 @@
+/*
+--------------------------------------------------------------
+Laptop Dimensions: Minimum Width: 925px
+Tablet/Phone Dimensions: Maximum Width: 924px
+--------------------------------------------------------------
+*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 82px;
+    padding-left: 1%;
+    padding-right: 1%;
+
+    .f_img {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+
+        @media screen and (min-width: 925px) {
+            .res_img {
+                content: url('/revolt_logo.png');
+                width: 215.5px;
+            }
+        }
+        @media screen and (max-width: 924px) {
+            .res_img {
+                content: url('/revolt_logo_invert.png');
+                width: 50px;
+            }
+        }
+    }
+
+    .f_text {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .fts {
+            font-family: "Helvetica-Regular";
+
+            @media screen and (min-width: 925px) {
+                font-size: 13.5px;
+            }
+            @media screen and (max-width: 924px) {
+                font-size: 11.5px;
+            }
+        }
+    }
+
+    .f_socials {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .si {
+            margin-left: 4.5px;
+            margin-right: 4.5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            @media screen and (min-width: 925px) {
+                width: 30px;
+                height: 30px;
+            }
+            @media screen and (max-width: 924px) {
+                width: 20.5px;
+                height: 20.5px;
+            }
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+    }
+}
+
+@font-face {
+    font-family: "Benzin-Regular";
+    src: url("/font_styles/Benzin-Regular.ttf");
+}
+@font-face {
+    font-family: "Benzin-Bold";
+    src: url("/font_styles/Benzin-Bold.ttf");
+}
+@font-face {
+    font-family: "Coolvetica-Regular";
+    src: url("/font_styles/coolvetica\ rg.otf");
+}
+@font-face {
+    font-family: "Helvetica-Regular";
+    src: url("/font_styles/Helvetica.ttf");
+}

@@ -1,0 +1,269 @@
+
+/*
+----------------------------------------------
+Laptop Dimensons: Minimum Width: 950px
+Tablet/Phone Dimensions: Maximum Width: 949px
+----------------------------------------------
+*/
+
+.header {
+    position: fixed;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    -webkit-backdrop-filter: blur(8.5px);
+    backdrop-filter: blur(8.5px);
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 0.25s;
+    z-index: 200;
+    background-color: rgba(57, 57, 57, 0.5);
+
+    @media screen and (min-width: 950px) {
+        height: 60px;
+
+        &.header:hover {
+            z-index: 210;
+            opacity: 100%;
+            background-color: red;
+
+            .menu_links .hb.active {
+                color: red;
+            }
+        }
+    }
+    @media screen and (max-width: 949px) {
+        height: 60px;
+    }
+
+    .h_img_container {
+        display: flex;
+        flex-direction: row;
+        z-index: 1200;
+
+        .h_img {
+            position: relative;
+            justify-content: flex-start;
+            
+            .h_img_box {
+                @media screen and (min-width: 950px) {
+                    margin-top: 25.5%;
+                    margin-bottom: 5.5%;
+                    margin-left: 3.5%;
+                    width: 70px;
+                    z-index: 8888;
+                    .responsive_img {
+                        content: url('/revolt_logo_invert.png');
+                    }
+                }
+                @media screen and (max-width: 949px) {
+                    margin-top: 2%;
+                    width: 26.5vh;
+                    z-index: 9999;
+                    .responsive_img {
+                        content: url('/revolt_logo.png');
+                    }
+                }
+            }
+        }
+    }
+
+    .menu_links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        padding: 1vh;
+        margin-left: 7vw;
+        z-index: 12;
+
+        @media screen and (min-width: 950px) {
+            padding-top: 1vh;
+        }
+        @media screen and (max-width: 949px) {
+            display: none;
+        }
+
+        .hb {
+            margin: 0;
+            padding-left: 8.75%;
+            padding-right: 8.75%;
+
+            color: white;
+            font-size: large;
+            font-family: "Benzin-Regular";
+            text-transform: uppercase;
+            text-align: center;
+            white-space: nowrap;
+            transition: transform 0.3s ease;
+            z-index: 12;
+        
+            &.active {
+                background-color: white;
+                color: black; 
+                z-index: 12;
+            }
+            &:hover {
+                font-family: "Benzin-Bold";
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .h_socials {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1vh;
+        padding-right: 20px;
+        z-index: 12;
+        width: auto;
+
+        .si {
+            width: 30px;
+            height: 30px;
+            margin-left: 4.5px;
+            margin-right: 4.5px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+
+        @media screen and (min-width: 950px) {
+            .h_socials {
+                padding-right: 30px;
+            }
+        }
+        @media screen and (max-width: 949px) {
+            display: none;
+        }
+
+    }
+
+    .h_side {
+        height: auto;
+        width: auto;
+        padding-top: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        @media screen and (min-width: 950px) {
+            display: none;
+        }
+        @media screen and (max-width: 949px){
+            .sbc {
+                position: relative;
+
+                .sb {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    height: 100vh;
+                    width: 100vw;
+                    background-color: rgba(255, 0, 0, 0.9);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    transition: transform 0.3s ease-in-out;
+                    transform: translateX(-100%);
+                    z-index: 1000;
+
+                    .h_b {
+                        margin: 15px 0;
+                        font-size: large;
+                        font-family: "Benzin-Regular";
+                        text-transform: uppercase;
+                        color: white;
+                        text-decoration: none;
+                        transition: 0.2s;
+                        z-index: 1001;
+
+                        &.h_b:hover {
+                            font-family: "Benzin-Bold";
+                            transform: scale(1.1);
+                        }
+                    }
+                    
+                }
+
+                .side_socials {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-top: 20px; /* Add space between links and icons */
+
+                    .si {
+                        width: 30px;
+                        height: 30px;
+                        margin: 0 10px; /* Spacing between icons */
+                        transition: transform 0.3s ease;
+                    
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }  
+                }
+
+                .visible {
+                    transform: translateX(0);
+                }
+                .hidden {
+                    transform: translateX(-100%);
+                }
+
+                .sbb_open, .sbb_close {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 5px;
+                    z-index: 1001;
+                }
+                .sbb_open {
+                    position: fixed;
+                    top: 10px;
+                    right: 10px;
+                    bottom: 10px;
+                }
+                .sbb_close {
+                    position: fixed;
+                    top: 10px;
+                    right: 10px;
+                    bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@font-face {
+    font-family: "Benzin-Regular";
+    src: url("/font_styles/Benzin-Regular.ttf");
+}
+@font-face {
+    font-family: "Benzin-Bold";
+    src: url("/font_styles/Benzin-Bold.ttf");
+}
+@font-face {
+    font-family: "Coolvetica-Regular";
+    src: url("/font_styles/coolvetica\ rg.otf");
+}
+@font-face {
+    font-family: "Helvetica-Regular";
+    src: url("/font_styles/Helvetica.ttf");
+}

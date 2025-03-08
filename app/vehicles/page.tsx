@@ -1,8 +1,16 @@
+"use client";
 
-export const metadata = {title: "Vehciles"};
+import { useDocumentTitle } from "@/components/Tab_Title";
+import UnderDevelopment from "@/components/Under_Devlopment";
 
-export default function Vehciles() {
+interface MyPageProps {
+  pageTitle?: string;
+}
+
+export default function Vehciles({ pageTitle }: MyPageProps) {
+    useDocumentTitle(pageTitle);
+
     return (
-        <p>Vehciles</p>
+        <UnderDevelopment />
     )
 }

@@ -1,8 +1,16 @@
+"use client";
 
-export const metadata = {title: "Sponsor"};
+import { useDocumentTitle } from "@/components/Tab_Title";
+import UnderDevelopment from "@/components/Under_Devlopment";
 
-export default function Sponsor() {
+interface MyPageProps {
+  pageTitle?: string;
+}
+
+export default function Sponsor({ pageTitle }: MyPageProps) {
+    useDocumentTitle(pageTitle);
+
     return (
-        <p>Sponsor</p>
+        <UnderDevelopment />
     )
 }

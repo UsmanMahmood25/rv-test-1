@@ -1,8 +1,14 @@
+"use client";
 
+import { useDocumentTitle } from "@/components/Tab_Title";
 
-export const metadata = {title: "Member Access"};
+interface MyPageProps {
+  pageTitle?: string;
+}
 
-export default function Memeber() {
+export default function Memeber({ pageTitle }: MyPageProps) {
+    useDocumentTitle(pageTitle);
+
     return (
         <p>Staff Only</p>
     )
