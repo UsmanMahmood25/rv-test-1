@@ -3,7 +3,7 @@
 import { useDocumentTitle } from "@/components/Tab_Title";
 
 interface MyPageProps {
-  pageTitle?: string;
+  pageTitle: string;
 }
 
 import Image from "next/image";
@@ -85,7 +85,7 @@ const Team_Section: React.FC<Team_Section_Item> = ({ title, members }) => {
     )
 }
 
-export default function Team({ pageTitle }: MyPageProps) {
+export default function Team({ pageTitle = "ReVOLT: Team" }: MyPageProps) {
     useDocumentTitle(pageTitle);
 
     return (

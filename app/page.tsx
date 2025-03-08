@@ -4,10 +4,10 @@ import Home_Main from "./home/page";
 import { useDocumentTitle } from "@/components/Tab_Title";
 
 interface MyPageProps {
-  pageTitle?: string;
+  pageTitle: string;
 }
 
-export default function Home({ pageTitle }: MyPageProps) {
+export default function Home({ pageTitle = "ReVOLT: Home" }: MyPageProps) {
   useDocumentTitle(pageTitle);
   
   return (
