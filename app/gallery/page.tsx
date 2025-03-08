@@ -1,8 +1,17 @@
+"use client";
 
-export const metadata = {title: "Gallery"};
+import React from "react";
+import { useDocumentTitle } from "@/components/Tab_Title";
+import UnderDevelopment from "@/components/Under_Devlopment";
 
-export default function Gallery() {
+interface MyPageProps {
+  pageTitle: string;
+}
+
+export default function Gallery({ pageTitle = "ReVOLT: Gallery" }: MyPageProps) {
+    useDocumentTitle(pageTitle);
+
     return (
-        <p>Gallery</p>
+        <UnderDevelopment />
     )
 }
