@@ -101,12 +101,12 @@ Picture Slider For About Us
 ----------------------------------------------
 */
 export const images = [
-    '/hp_imgs/slide_show/img1.jpg',
-    '/hp_imgs/slide_show/img2.jpg',
-    '/hp_imgs/slide_show/img3.jpg',
-    '/hp_imgs/slide_show/img4.jpg',
-    '/hp_imgs/slide_show/img5.jpg',
-    '/hp_imgs/slide_show/img6.jpg',
+    '/hp_imgs/slide_show/img1.JPG',
+    '/hp_imgs/slide_show/img2.JPG',
+    '/hp_imgs/slide_show/img3.JPG',
+    '/hp_imgs/slide_show/img4.JPG',
+    '/hp_imgs/slide_show/img5.JPG',
+    '/hp_imgs/slide_show/img6.JPG',
 ];
 export interface PicSliderProps {
     images: string[];
