@@ -43,7 +43,7 @@ Tablet/Phone Dimensions: Maximum Width: 949px
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 3; // Make sure it appears above .img_container
+    z-index: 4; // Make sure it appears above .img_container
 
     .pkg_preview {
         padding-bottom: 1vw;
