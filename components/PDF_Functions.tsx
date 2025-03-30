@@ -22,23 +22,24 @@ export const PDF_Download: React.FC = () => {
 };
 
 export const PDF_Preview: React.FC = () => {
-  const [isReady, setIsReady] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsReady(true);
+    setIsLoaded(true); // This ensures it's mounted early
   }, []);
 
-  return (
-    <div className={`${pdfss.preview} ${isReady ? pdfss.loaded : ""}`}>
+  return isLoaded ? (
+    <div className={pdfss.preview}>
       <Image
         src="/sp_imgs/pkg_imgs/pg1.png"
         alt="PDF Preview"
         width={1500}
         height={1500}
         className={pdfss.pdf_pre_img}
+        priority
       />
     </div>
-  );
+  ) : null;
 };
 
 export const BusinessTeam: React.FC = () => {

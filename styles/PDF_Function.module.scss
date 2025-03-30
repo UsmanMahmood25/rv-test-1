@@ -33,8 +33,7 @@ Tablet/Phone Dimensions: Maximum Width: 949px
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
     z-index: 2;
 
     .pdf_pre_img {
@@ -42,13 +41,9 @@ Tablet/Phone Dimensions: Maximum Width: 949px
         height: auto;
 
         @media screen and (max-width: 949px) {
-            width: 80vw;
+            width: 50vw;
         }
     }
-}
-  
-.loaded {
-    opacity: 1;
 }
   
 
