@@ -1,0 +1,219 @@
+
+/*
+----------------------------------------------
+Laptop Dimensons: Minimum Width: 950px
+Tablet/Phone Dimensions: Maximum Width: 949px
+----------------------------------------------
+*/
+
+.img_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; // Ensure it takes full screen height
+    width: auto;  // Ensure full width for proper centering
+    z-index: 2; // Image container will stay behind
+
+    .img_child_contain {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100vw; // Keeps the container size fixed
+        height: 100vh; // Adjust as needed
+        overflow: hidden; // Ensures the image doesn't resize the container
+
+        .img_style {
+            width: 100%;  // Makes sure the image fills the container
+            height: 100%;
+            object-fit: cover; // Cuts off excess parts while maintaining aspect ratio
+            overflow: hidden;
+        }
+    }
+}
+
+.pkg_container {
+    position: absolute; // Absolutely position it relative to .img_container
+    top: 7.5vh;
+    left: 0vw;
+    right: 0vw;
+    bottom: 0vh; // Ensure it covers the full container area
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; // Make sure it appears above .img_container
+
+    .pkg_preview {
+        padding-bottom: 1vw;
+    }
+
+    .pdf_dwnld {
+        padding-bottom: 1vw;
+    }
+}
+
+.sponsor_lvls {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    border-radius: 25px;
+    width: 94.2vw;
+    margin-bottom: 2vw;
+
+    .s_header {
+        transform: translateY(2.5vw);
+
+        .s_h_text {
+            padding-left: 7.5vw;
+            font-size: 2.75vw;
+            font-family: 'Benzin-Bold';
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 
+                0 0 4px rgba(0, 0, 0, 0.6), 
+                0 0 8px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .sponsor_class {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 7.5vw;
+        transform: translateY(4.5vw);
+
+        .diamond {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 4vw;
+            margin-bottom: 4vw;
+            padding-bottom: 4vw;
+            border-radius: 25px;
+            background-color: #999999;
+
+            &.diamond h1 {
+                font-family: 'Benzin-Bold';
+                color:#00eeff;
+                margin-bottom: 1vw;
+                text-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 
+                    0 0 4px rgba(0, 0, 0, 0.6), 
+                    0 0 8px rgba(0, 0, 0, 0.4);
+
+                @media screen and (min-width: 950px) {
+                    font-size: 50px;
+                }
+                @media screen and (max-width: 949px) {
+                    font-size: 5.0vw;
+                }
+            }
+            &.diamond div {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+        }
+        .gold {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 4vw;
+            margin-bottom: 4vw;
+            padding-bottom: 4vw;
+            border-radius: 25px;
+            background-color: #999999;
+
+            &.gold h1 {
+                font-family: 'Benzin-Bold';
+                color:#ffd700;
+                margin-bottom: 1vw;
+                text-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 
+                    0 0 4px rgba(0, 0, 0, 0.6), 
+                    0 0 8px rgba(0, 0, 0, 0.4);
+
+                @media screen and (min-width: 950px) {
+                    font-size: 50px;
+                }
+                @media screen and (max-width: 949px) {
+                    font-size: 5.0vw;
+                }
+            }
+            &.gold div {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+        }
+        .silver {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 4vw;
+            margin-bottom: 4vw;
+            padding-bottom: 4vw;
+            border-radius: 25px;
+            background-color: #999999;
+
+            &.silver h1 {
+                font-family: 'Benzin-Bold';
+                color: #c0c0c0;
+                margin-bottom: 1vw; 
+                text-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 
+                    0 0 4px rgba(0, 0, 0, 0.6), 
+                    0 0 8px rgba(0, 0, 0, 0.4);
+                
+                @media screen and (min-width: 950px) {
+                    font-size: 50px;
+                }
+                @media screen and (max-width: 949px) {
+                    font-size: 5.0vw;
+                }
+            }
+            &.silver div {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+        }
+        .bronze {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 4vw;
+            margin-bottom: 4vw;
+            padding-bottom: 4vw;
+            border-radius: 25px;
+            background-color: #999999;
+
+            &.bronze h1 {
+                font-family: 'Benzin-Bold';
+                color: #cd7f32;
+                margin-bottom: 1vw;
+                text-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 
+                    0 0 4px rgba(0, 0, 0, 0.6), 
+                    0 0 8px rgba(0, 0, 0, 0.4);
+                
+                @media screen and (min-width: 950px) {
+                    font-size: 50px;
+                }
+                @media screen and (max-width: 949px) {
+                    font-size: 5.0vw;
+                }
+            }
+            &.bronze div {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+        }
+    }
+}

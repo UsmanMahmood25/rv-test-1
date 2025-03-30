@@ -1,0 +1,70 @@
+
+/*
+----------------------------------------------
+Laptop Dimensons: Minimum Width: 950px
+Tablet/Phone Dimensions: Maximum Width: 949px
+----------------------------------------------
+*/
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    .b_style {
+        font-family: "Benzin-Regular";
+        font-size: 1.5vw;
+        border: 0.5vw solid white;
+        border-radius: 3vw;
+        padding: 0.5vw;
+        background-color: red;
+        transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, border 0.4s ease-in-out;
+
+        &:hover {
+            background-color: white;
+            color: red;
+            border: 0.5vw solid red;
+        } 
+    }
+}
+
+.preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+
+    .pdf_pre_img {
+        width: 30vw;
+        height: auto;
+
+        @media screen and (max-width: 949px) {
+            width: 80vw;
+        }
+    }
+}
+  
+.loaded {
+    opacity: 1;
+}
+  
+
+@font-face {
+    font-family: "Benzin-Regular";
+    src: url("/font_styles/Benzin-Regular.ttf");
+}
+@font-face {
+    font-family: "Benzin-Bold";
+    src: url("/font_styles/Benzin-Bold.ttf");
+}
+@font-face {
+    font-family: "Coolvetica-Regular";
+    src: url("/font_styles/coolvetica\ rg.otf");
+}
+@font-face {
+    font-family: "Helvetica-Regular";
+    src: url("/font_styles/Helvetica.ttf");
+}

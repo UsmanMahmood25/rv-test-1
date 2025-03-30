@@ -1,8 +1,7 @@
-"use client";
 
 import Image from "next/image";
 import ts from "@/styles/Team.module.scss";
-import RandomImg from "@/components/Random_Image";
+import RandomImg from "@/components/Image_Functions";
 
 const team_data = {
     executive_members: [

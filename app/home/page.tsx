@@ -1,9 +1,8 @@
-"use client";
 
-import Image from "next/image";
 import { WhatWeDo, PictureSlider, images } from "./HomeFunctions";
 // import { BikeMain } from "@/components/Bike_Models";
 import home_style from "@/styles/Home.module.scss";
+import { PopInSection } from "@/components/Div_Popin";
 
 export default function Home_Main() {
     return (
@@ -32,6 +31,7 @@ export default function Home_Main() {
                 </div>
             </div>
 
+            <PopInSection>
             <div className={home_style.who_we_are}>
                 <div className={home_style.wwa_header}> 
                     <h1 className={home_style.wwa_h_text}>WHO WE ARE</h1>
@@ -63,7 +63,9 @@ export default function Home_Main() {
                     </div>
                 </div>
             </div>
+            </PopInSection>
 
+            <PopInSection>
             <div className={home_style.what_we_do}>
                 <div className={home_style.wwd_content}>
                     <WhatWeDo />
@@ -72,7 +74,9 @@ export default function Home_Main() {
                     <PictureSlider images={ images } />
                 </div>
             </div>
+            </PopInSection>
 
+            <PopInSection>
             <div className={home_style.planned_comp}>
                 <div className={home_style.pc_header}> 
                     <h1 className={home_style.pc_h_text}>PLANNED COMPETITIONS</h1>
@@ -104,25 +108,8 @@ export default function Home_Main() {
                 <div className={home_style.pc_temp}>
                     <p className={home_style.pc_t_text}> To Be Announced </p>
                 </div>
-
             </div>
-
-            <div className={home_style.sponsors}>
-                <div className={home_style.s_header}>
-                    <h1 className={home_style.s_h_text}> SPONSORS</h1>
-                </div>
-                <div className={home_style.s_images}>
-
-                    {/* Template to Insert Images */}
-                    {/* <Image src='' alt='' sizes={'150vw'} width={0} height={0} style={{}} /> */}
-
-                    <Image src='/hp_imgs/sponsors/onshape_logo.png' alt='OnShape' sizes={'150vw'} width={0} height={0} style={{ width: '50vw', height: 'auto', padding: '1.5vw' }} />
-                    <Image src='/hp_imgs/sponsors/ucalg_schulich_logo.png' alt='UCalgary' sizes={'150vw'} width={0} height={0} style={{ width: '35vw', height: 'auto', paddingRight: '1.5vw', paddingLeft: '1.5vw', paddingBottom: '2.75vw' }} /> 
-                    
-                </div>
-            </div>
-
-            
+            </PopInSection>
 
         </main>
     );

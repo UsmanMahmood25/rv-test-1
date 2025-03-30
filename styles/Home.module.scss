@@ -1,12 +1,4 @@
 
-/* 
------------------------------------------------------------------
-Laptop Dimensions (LD): Minimum Width: 925px
-Tablet Dimensions (TD): Minimum Width: 646px, Maximum Width: 924px
-Phone Dimensions (PD): Maximum Width: 645px 
------------------------------------------------------------------
-*/
-
 /*
 -----------------------------------------------------------------
 Home Page Sub Headers (Who We Are, etc):
@@ -73,7 +65,9 @@ Tablet/Phone Dimensions: Maximum Width: 949px
             .reg_text_1_1 {
                 font-size: 2.125vw;
                 font-family: 'Benzin-Regular';
-                -webkit-text-stroke: 0.05vw grey;
+                text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 
+                0 0 4px rgba(255, 255, 255, 0.6), 
+                0 0 8px rgba(255, 255, 255, 0.4);
             }
         }
 
@@ -86,7 +80,9 @@ Tablet/Phone Dimensions: Maximum Width: 949px
             .reg_text_2_1 {
                 font-size: 2.125vw;
                 font-family: 'Benzin-Regular';
-                -webkit-text-stroke: 0.05vw grey;
+                text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 
+                0 0 4px rgba(255, 255, 255, 0.6), 
+                0 0 8px rgba(255, 255, 255, 0.4);
             }
         }
 
@@ -103,7 +99,9 @@ Tablet/Phone Dimensions: Maximum Width: 949px
                 font-size: 9vw;
                 font-family: 'Benzin-Regular';
                 transition: transform 0.5s ease, font-family 0.5s ease;
-                -webkit-text-stroke: 0.25vw grey;
+                text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 
+                0 0 4px rgba(255, 255, 255, 0.6), 
+                0 0 8px rgba(255, 255, 255, 0.4);
 
                 &.large_text_1:hover {
                     font-size: 9vw;
@@ -120,7 +118,10 @@ Tablet/Phone Dimensions: Maximum Width: 949px
     flex-direction: column;
     position: relative;
     background-color: rgb(43, 43, 43);
-    width: auto;
+    justify-content: center;
+    margin-left: 2vw;
+    border-radius: 25px;
+    width: 94.2vw;
     z-index: 10;
 
     .wwa_header {
@@ -130,6 +131,9 @@ Tablet/Phone Dimensions: Maximum Width: 949px
             padding-left: 7.5vw;
             font-size: 2.75vw;
             font-family: 'Benzin-Bold';
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 
+                0 0 4px rgba(0, 0, 0, 0.6), 
+                0 0 8px rgba(0, 0, 0, 0.4);
         }
     }
 
@@ -537,9 +541,11 @@ Tablet/Phone Dimensions: Maximum Width: 949px
     flex-direction: column;
     position: relative;
     background-color: rgb(43, 43, 43);
-    width: auto;
-    margin-top: 0vw;                                                              // Main Postion
-    // margin-top: 5.5vw;                                                         // Temp Position
+    margin-top: 0vw;
+    margin-left: 2vw;
+    border-radius: 25px;
+    width: 94.2vw;
+    margin-bottom: 5vw;                                                              
 
     .pc_header {
         transform: translateY(-2.0vw);
@@ -548,7 +554,9 @@ Tablet/Phone Dimensions: Maximum Width: 949px
             padding-left: 7.5vw;
             font-size: 2.75vw;
             font-family: 'Benzin-Bold';
-            -webkit-text-stroke: 0.1vw grey;
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 
+                0 0 4px rgba(0, 0, 0, 0.6), 
+                0 0 8px rgba(0, 0, 0, 0.4);
         }
     }
 
@@ -612,34 +620,6 @@ Tablet/Phone Dimensions: Maximum Width: 949px
             justify-content: center;
             
         }
-    }
-}
-
-.sponsors {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: auto;
-    background-color: red;
-
-    .s_header {
-        margin-top: 5.75vw;
-
-        .s_h_text {
-            padding-left: 7.5vw;
-            font-size: 2.75vw;
-            font-family: 'Benzin-Bold';
-        }
-    }
-
-    .s_images {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 4.5vw;
-        align-items: center;
-        justify-content: center;
-
     }
 }
 

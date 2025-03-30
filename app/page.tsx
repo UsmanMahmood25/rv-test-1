@@ -1,4 +1,3 @@
-"use client";
 
 import Home_Main from "./home/page";
 

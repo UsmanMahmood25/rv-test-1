@@ -1,4 +1,3 @@
-"use client";
 
 import nfs from "@/styles/NotFound.module.scss";
 
